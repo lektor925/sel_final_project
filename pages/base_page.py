@@ -1,3 +1,5 @@
+from math import log10, sin
+
 from selenium.common.exceptions import NoSuchElementException
 
 
@@ -16,3 +18,6 @@ class BasePage:
         except NoSuchElementException:
             return False
         return True
+
+    def solve_quiz_and_get_code(self, x):
+        return log10(abs(12*sin(x)))
